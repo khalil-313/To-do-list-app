@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 600px;
+}
+.header {
+  background-color:rgba(221, 165, 60, 0.822);
+  padding: 15px 40px 30px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+h2 {
+  background-color: transparent;
+  margin: 10px;
+  font-size: 25px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #4e4e4e;
+}
+input {
+  background-color: #d9d9d9;
+  width: 75%;
+  float: left;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid lightgrey;
+}
+button {
+  height: 40px;
+  width: 25%;
+  float: right;
+  border: none;
+  padding: 10px;
+  background-color: #d9d9d9;
+  color: #555;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
+button:hover {
+  background-color: #bbb;
+}
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ul {
+  max-height: 300px;
+  overflow-y: auto;
+  list-style-type: none;
+}
+li {
+  margin: 1px 0px;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background-color: #eee;
+  font-size: 18px;
+  transition: 0.3s;
+  user-select: none;
+  border-radius: 2px;
+}
+li:hover {
+  background: rgb(205, 204, 204);
+}
+.closeBtn {
+  display: none;
+  position: absolute;
+  right: 15px;
+  transition: 0.3s;
+  
+}
+ul li:hover .closeBtn {
+  display: inline-block;
+  
+
+}
+.closeBtn i:hover {
+  color: #ec1d1d;
+  background: rgb(205, 204, 204);
+
+}
+.taskList li.done {
+  background-color: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+ul li.done::before {
+  content: "";
+  width: 8px;
+  height: 16px;
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  border-color: #fff;
+  border-width: 0px 2px 2px 0px;
+  border-style: solid;
+  transform: rotate(45deg);
+}
